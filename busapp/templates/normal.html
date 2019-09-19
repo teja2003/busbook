@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Bus Booking</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="col-1-4 col-1-4-sm">
+                <div class="controls">
+                <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;<h10>Departure_Time</h10></label>
+                  <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+                  <li class="form-line" data-type="control_time" id="id_20">
+                        <label class="form-label form-label-top form-label-auto" id="label_20" for="input_20_hourSelect"> Time </label>
+                        <div id="cid_20" class="form-input-wide">
+                          <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                              <select class="time-dropdown form-dropdown" id="input_20_hourSelect" name="q20_time[hourSelect]" data-component="time-hour">
+                                <option>  </option>
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                                <option value="10"> 10 </option>
+                                <option value="11"> 11 </option>
+                                <option value="12"> 12 </option>
+                              </select>
+                              <span class="date-separate">
+                                &nbsp;:
+                              </span>
+                              <label class="form-sub-label" for="input_20_hourSelect" id="sublabel_20_hour" style="min-height:13px"> Hour </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                              <select class="time-dropdown form-dropdown" id="input_20_minuteSelect" name="q20_time[minuteSelect]" data-component="time-minute">
+                                <option>  </option>
+                                <option value="00"> 00 </option>
+                                <option value="10"> 10 </option>
+                                <option value="20"> 20 </option>
+                                <option value="30"> 30 </option>
+                                <option value="40"> 40 </option>
+                                <option value="50"> 50 </option>
+                              </select>
+                              <label class="form-sub-label" for="input_20_minuteSelect" id="sublabel_20_minutes" style="min-height:13px"> Minutes </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top">
+                              <select class="time-dropdown form-dropdown" id="input_20_ampm" name="q20_time[ampm]" data-component="time-ampm">
+                                <option selected="" value="AM"> AM </option>
+                                <option value="PM"> PM </option>
+                              </select>
+                              <label class="form-sub-label" for="input_20_ampm" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap"> AM/PM Option </label>
+                            </span>
+                          </div>
+                        </div>
+                      </li>
+                </div>      
+              </div><br></br>
+            <input type='submit' value="Book-ticket">
+        </form>
+</form>
+
+</body>
+</html>
